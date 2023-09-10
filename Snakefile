@@ -3,7 +3,7 @@ import boto3
 # Define your AWS credentials and S3 bucket name
 aws_access_key_id = config["key"]
 aws_secret_access_key = config["secret"]
-s3_bucket_name = "bhklab_orcestra"  # Replace with your S3 bucket name
+s3_bucket_name = "bhklab_orcestra"
 endpoint_url = config["host"]
 
 # Print AWS credential values for debugging
@@ -20,8 +20,6 @@ s3_client = boto3.client(
 )
 
 rule makeMAE:
-    output:
-        "RADCURE_radiomic_MAE.rds"
     run:
         # Upload the file to S3 using boto3
         local_file_path = "RADCURE_radiomic_MAE.rds"
