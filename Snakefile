@@ -15,5 +15,5 @@ rule makeMAE:
         S3.remote(prefix + "RADCURE_radiomic_MAE.rds")
     shell:
         """
-        aws s3 cp RADCURE_radiomic_MAE.rds s3://{prefix}RADCURE_radiomic_MAE.rds
+        s3 cp RADCURE_radiomic_MAE.rds s3://{prefix}RADCURE_radiomic_MAE.rds
         """
