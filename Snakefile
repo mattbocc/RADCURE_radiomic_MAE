@@ -6,6 +6,11 @@ aws_secret_access_key = config["secret"]
 s3_bucket_name = "bhklab_orcestra"  # Replace with your S3 bucket name
 endpoint_url = config["host"]
 
+# Print AWS credential values for debugging
+print(f"AWS Access Key ID: {aws_access_key_id}")
+print(f"AWS Secret Access Key: {aws_secret_access_key}")
+print(f"Endpoint URL: {endpoint_url}")
+
 # Create an S3 client
 s3_client = boto3.client(
     's3',
